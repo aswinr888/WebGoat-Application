@@ -169,7 +169,8 @@ public class Challenge2Screen extends SequentialLessonAdapter
         ec.addElement(input);
 
         Cookie newCookie = new Cookie(USER_COOKIE, Encoding.base64Encode(user));
-        cookie.setSecure(true);
+        cookie.setSecure(cookieSecure);
+        cookie.setHttpOnly(cookieHttpOnly);
         s.getResponse().addCookie(newCookie);
         phoneHome(s, "User: " + username + " --> " + "Pass: " + password);
         // <END_OMIT_SOURCE>
