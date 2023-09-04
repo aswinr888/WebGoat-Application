@@ -192,6 +192,7 @@ public class Challenge2Screen extends SequentialLessonAdapter
         // <START_OMIT_SOURCE>
 
         Cookie newCookie = new Cookie(USER_COOKIE, Encoding.base64Encode(user));
+        cookie.setSecure(true);
         s.getResponse().addCookie(newCookie);
 
         ElementContainer ec = new ElementContainer();
